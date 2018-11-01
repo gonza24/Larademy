@@ -6,7 +6,7 @@
                 {{ __("Github")}} <i class="fa fa-github"></i>
             </a>
 
-            <a href="{{ route('social_auth', ['driver' => 'facebook']) }}" class="btn btn-github btn-lg btn-block">
+            <a href="{{ route('social_auth', ['driver' => 'facebook']) }}" class="btn btn-facebook btn-lg btn-block">
                 {{ __("Facebook")}} <i class="fa fa-facebook"></i>
             </a>
         </div>

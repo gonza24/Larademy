@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/*!
+@import url(https://fonts.googleapis.com/css?family=Hind+Vadodara);/*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10466,9 +10466,53 @@ a.text-dark:focus {
   }
 }
 
-.navbar-laravel {
-  background-color: #fff;
+body {
+  font-family: 'Hind Vadodara', sans-serif;
+}
+
+main {
+  min-height: 87vh;
+}
+
+.footer {
+  width: 100%;
+  background-color: #4c515c;
+  color: #fff;
+  padding: 30px;
+}
+
+header .navbar-laravel {
+  background-color: #0055ff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+header .navbar-laravel .nav-link,
+header .navbar-laravel .navbar-brand {
+  color: #fff !important;
+}
+
+.btn-github {
+  background-color: #333333;
+  color: #fff;
+}
+
+.btn-github:hover {
+  background-color: #4C515C;
+  color: #fff;
+}
+
+.btn-facebook {
+  background-color: #4267b2;
+  color: #fff;
+}
+
+.btn-facebook:hover {
+  background-color: #3881C4;
+  color: #fff;
+}
+
+.card-header {
+  text-align: center;
 }
 
