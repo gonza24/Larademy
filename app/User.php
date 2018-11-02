@@ -36,6 +36,17 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    //Para model event
+    protected static function boot(){
+        parent::boot();
+        static::creating(function(User $user){
+            //compruebo que no se este ejecutando desde la terminal
+            if( ! \App::runningInConsole()){
+                $user->slug = str_slug($user->name . " " . $user->last_name, "-");
+            }
+        });
+    }
+
     /**
      * The attributes that are mass assignable.
      *
