@@ -47,7 +47,7 @@ class LoginController extends Controller
     }
 
     public function handleProviderCallback(string $driver){
-        if( ! request()->has('code') || request()->has('denied')){
+        if( ! request()->has('code') ||  request()->has('denied')){
             session()->flash('message', ['danger', __('Inicio de sesión cancelado')]);
             return redirect('login');
         }
@@ -59,13 +59,14 @@ class LoginController extends Controller
         $email = $socialUser->email;
         $check = User::whereEmail($email)->first();
 
+
         if($check){
             $user = $check;
         } else{
             DB::beginTransaction();
             try{
                 $user = User::create([
-                    "name" => $socialUser->name,
+                    "name" => $socialUser->nickname,
                     "email" => $email
                 ]);
                 UserSocialAccount::create([
@@ -82,7 +83,8 @@ class LoginController extends Controller
                 DB::rollBack();
             }
         }
-        if($success == true){
+
+        if($success === true){
             DB::commit();
             auth()->loginUsingId($user->id);
             return redirect()->route('home');

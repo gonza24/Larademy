@@ -40,7 +40,7 @@ class User extends Authenticatable
     protected static function boot(){
         parent::boot();
         static::creating(function(User $user){
-            //compruebo que no se este ejecutando desde la terminal
+            //compruebo que no se esté ejecutando desde la terminal
             if( ! \App::runningInConsole()){
                 $user->slug = str_slug($user->name . " " . $user->last_name, "-");
             }
