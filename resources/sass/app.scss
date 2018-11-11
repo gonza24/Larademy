@@ -5,6 +5,8 @@
 // Variables
 @import 'variables';
 
+@import "card";
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
@@ -24,7 +26,7 @@ main {
 }
 
 header .navbar-laravel {
-  background-color: #0055ff;
+  background-color: #005792;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   .nav-link, .navbar-brand {
     color: #fff !important;
@@ -53,4 +55,9 @@ header .navbar-laravel {
 
 .card-header {
   text-align: center;
+}
+
+.btn-course, .badge-cat{
+  background-color: #26baee;
+  color: #FFF;
 }
