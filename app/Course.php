@@ -43,6 +43,8 @@ class Course extends Model
     const PENDING = 2;
     const REJECTED = 3;
 
+    protected $withCount = ['reviews', 'students'];
+
     public function pathAttachment(){
         return "/images/courses/" . $this->picture;
     }
