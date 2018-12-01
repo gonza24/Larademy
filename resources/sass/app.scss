@@ -57,7 +57,16 @@ header .navbar-laravel {
   text-align: center;
 }
 
-.btn-course, .badge-cat{
+.badge-cat{
   background-color: #26baee;
   color: #FFF;
+}
+
+.btn-more-info-course{
+  background-color: #3490dc;
+  color:#FFF;
+}
+
+.yellow {
+  color: $yellow;
 }

@@ -31,12 +31,12 @@
   font-size: 20px;
 }
 
-.card-01.height-fix {
+.card-01 .height-fix {
   height: 455px;
   overflow: hidden;
 }
 
-.card-01.height-fix .card-img-top {
+.card-01 .height-fix .card-img-top {
   width: auto !important;
 }
 
@@ -10558,9 +10558,17 @@ header .navbar-laravel .navbar-brand {
   text-align: center;
 }
 
-.btn-course,
 .badge-cat {
   background-color: #26baee;
   color: #FFF;
+}
+
+.btn-more-info-course {
+  background-color: #3490dc;
+  color: #FFF;
+}
+
+.yellow {
+  color: #ffed4a;
 }
 
